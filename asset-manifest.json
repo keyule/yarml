@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/yarml/static/css/main.a617e044.chunk.css",
+    "main.js": "/yarml/static/js/main.9fdd3228.chunk.js",
+    "main.js.map": "/yarml/static/js/main.9fdd3228.chunk.js.map",
+    "runtime-main.js": "/yarml/static/js/runtime-main.623e3648.js",
+    "runtime-main.js.map": "/yarml/static/js/runtime-main.623e3648.js.map",
+    "static/js/2.5b9866c1.chunk.js": "/yarml/static/js/2.5b9866c1.chunk.js",
+    "static/js/2.5b9866c1.chunk.js.map": "/yarml/static/js/2.5b9866c1.chunk.js.map",
+    "static/js/3.1ee84d2e.chunk.js": "/yarml/static/js/3.1ee84d2e.chunk.js",
+    "static/js/3.1ee84d2e.chunk.js.map": "/yarml/static/js/3.1ee84d2e.chunk.js.map",
+    "index.html": "/yarml/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/yarml/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.5b9866c1.chunk.js.LICENSE.txt": "/yarml/static/js/2.5b9866c1.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/yarml/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.623e3648.js",
+    "static/js/2.5b9866c1.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.9fdd3228.chunk.js"
+  ]
+}
