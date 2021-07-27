@@ -25,6 +25,7 @@ function MyTable() {
       name: "Type",
       options: {
         filter: false,
+        display: false,
       }
     },
     {
@@ -32,6 +33,7 @@ function MyTable() {
       name: "Element",
       options: {
         filter: false,
+        display: false,
       }
     },
     {
@@ -46,6 +48,7 @@ function MyTable() {
       name: "Size(OB Mod)",
       options: {
         filter: false,
+        display: false,
       }
     },
     {
@@ -70,17 +73,18 @@ function MyTable() {
       }
     },
     {
-      label: "Base Per Odin",
+      label: "Base\\Odin",
       name: "Base Per Odin",
       options: {
         filter: false,
       }
     },
     {
-      label: "Job Per Odin",
+      label: "Job\\Odin",
       name: "Job Per Odin",
       options: {
         filter: false,
+        
       }
     },
     {
@@ -88,6 +92,7 @@ function MyTable() {
       name: "HP Per Base",
       options: {
         filter: false,
+        display: false,
       }
     },
     {
@@ -95,6 +100,7 @@ function MyTable() {
       name: "HP Per Job",
       options: {
         filter: false,
+        display: false,
       }
     },
     {
@@ -112,7 +118,7 @@ function MyTable() {
         customBodyRender: (value) => {
           const myArr = value.split("\n");
           return myArr.map((val) => {
-            return <Chip label={val}/>;
+            return <div><Chip label={val}/></div>
           });
         },
       }
@@ -121,7 +127,7 @@ function MyTable() {
       label: "Card Slot",
       name: "Card Slot",
       options: {
-        filter: false,
+        filter: true,
       }
     }
   ];
@@ -138,10 +144,21 @@ function MyTable() {
     },
   });
 
+  const options = {
+    pagination: false,
+    selectableRows: "none",
+    setTableProps: () => {
+      return {
+        padding: 'default',
+        size: 'small',
+      };
+    }
+  };
+
   return (
     <React.Fragment>
       <ThemeProvider theme={theme}>
-        <MUIDataTable title={'Yet Another ROX Monster List'} data={myData} columns={columns} />
+        <MUIDataTable title={'Yet Another ROX Monster List'} data={myData} columns={columns} options ={options}/>
       </ThemeProvider>
     </React.Fragment>
   );
