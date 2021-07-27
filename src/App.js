@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import MyTable from './table.js'
+import React from 'react';
+import {ThemeProvider, createTheme, Paper} from '@material-ui/core';
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      type: 'dark',
+      background: {
+        paper: '#1e1e1e',
+      },
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. test2
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Paper style={{height: "100vh"}}>
+        <div className="App">
+            <MyTable />
+        </div>
+      </Paper>
+    </ThemeProvider>
   );
 }
 
