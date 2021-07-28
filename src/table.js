@@ -215,9 +215,6 @@ function MyTable() {
   const theme = createTheme({
     palette: {
       type: 'dark',
-      background: {
-        paper: '#1e1e1e',
-      },
     },
   });
 
