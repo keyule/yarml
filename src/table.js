@@ -3,6 +3,13 @@ import { data } from "./data";
 import MUIDataTable from 'mui-datatables';
 import Chip from '@material-ui/core/Chip';
 import {ThemeProvider, createTheme} from '@material-ui/core';
+import {
+  FormGroup,
+  FormLabel,
+  TextField,
+  Checkbox,
+  FormControlLabel,
+} from '@material-ui/core';
 
 
 function MyTable() {
@@ -13,7 +20,77 @@ function MyTable() {
       name: "Level",
       options: {
         filter: true,
-      }
+        filterType: 'custom',
+
+        // if the below value is set, these values will be used every time the table is rendered.
+        // it's best to let the table internally manage the filterList
+        //filterList: [25, 50],
+        
+        customFilterListOptions: {
+          render: v => {
+            if (v[0] && v[1] ) {
+              return `Min Level: ${v[0]}, Max Level: ${v[1]}`;
+            } else if (v[0]) {
+              return `Min Level: ${v[0]}`;
+            } else if (v[1]) {
+              return `Max Level: ${v[1]}`;
+            }
+            return [];
+          },
+          update: (filterList, filterPos, index) => {
+            console.log('customFilterListOnDelete: ', filterList, filterPos, index);
+
+            if (filterPos === 0) {
+              filterList[index].splice(filterPos, 1, '');
+            } else if (filterPos === 1) {
+              filterList[index].splice(filterPos, 1);
+            } else if (filterPos === -1) {
+              filterList[index] = [];
+            }
+
+            return filterList;
+          },
+        },
+        filterOptions: {
+          names: [],
+          logic(age, filters) {
+            if (filters[0] && filters[1]) {
+              return age < filters[0] || age > filters[1];
+            } else if (filters[0]) {
+              return age < filters[0];
+            } else if (filters[1]) {
+              return age > filters[1];
+            }
+            return false;
+          },
+          display: (filterList, onChange, index, column) => (
+            <div>
+              <FormLabel>Level</FormLabel>
+              <FormGroup row>
+                <TextField
+                  label='min'
+                  value={filterList[index][0] || ''}
+                  onChange={event => {
+                    filterList[index][0] = event.target.value;
+                    onChange(filterList[index], index, column);
+                  }}
+                  style={{ width: '45%', marginRight: '5%' }}
+                />
+                <TextField
+                  label='max'
+                  value={filterList[index][1] || ''}
+                  onChange={event => {
+                    filterList[index][1] = event.target.value;
+                    onChange(filterList[index], index, column);
+                  }}
+                  style={{ width: '45%' }}
+                />
+              </FormGroup>
+            </div>
+          ),
+        },
+        print: false,
+      },
     }, {
       label: "Name",
       name: "Name",
