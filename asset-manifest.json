@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/yarml/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/yarml/static/js/main.4a60036e.chunk.js",
-    "main.js.map": "/yarml/static/js/main.4a60036e.chunk.js.map",
+    "main.js": "/yarml/static/js/main.d3ac0739.chunk.js",
+    "main.js.map": "/yarml/static/js/main.d3ac0739.chunk.js.map",
     "runtime-main.js": "/yarml/static/js/runtime-main.b257e3a7.js",
     "runtime-main.js.map": "/yarml/static/js/runtime-main.b257e3a7.js.map",
-    "static/js/2.90f72f7f.chunk.js": "/yarml/static/js/2.90f72f7f.chunk.js",
-    "static/js/2.90f72f7f.chunk.js.map": "/yarml/static/js/2.90f72f7f.chunk.js.map",
+    "static/js/2.cb6e2aa8.chunk.js": "/yarml/static/js/2.cb6e2aa8.chunk.js",
+    "static/js/2.cb6e2aa8.chunk.js.map": "/yarml/static/js/2.cb6e2aa8.chunk.js.map",
     "index.html": "/yarml/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/yarml/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.90f72f7f.chunk.js.LICENSE.txt": "/yarml/static/js/2.90f72f7f.chunk.js.LICENSE.txt"
+    "static/js/2.cb6e2aa8.chunk.js.LICENSE.txt": "/yarml/static/js/2.cb6e2aa8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b257e3a7.js",
-    "static/js/2.90f72f7f.chunk.js",
+    "static/js/2.cb6e2aa8.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.4a60036e.chunk.js"
+    "static/js/main.d3ac0739.chunk.js"
   ]
 }
