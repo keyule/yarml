@@ -218,16 +218,17 @@ function MyTable() {
     },
   });
 
-  var adj = (window.screen.width == window.outerWidth) ? 0 : -15
-  var maxScreenWidth = window.innerWidth * (window.screen.width / (window.outerWidth + adj))
-  if (parseInt(maxScreenWidth) != maxScreenWidth) maxScreenWidth = window.screen.width
+  var adj = (window.screen.height == window.outerHeight) ? 0 : -15
+  var maxScreenHeight = window.innerHeight * (window.screen.Height / (window.outerHeight + adj))
+  if (parseInt(maxScreenHeight) != maxScreenHeight) maxScreenHeight = window.screen.height
 
+  maxScreenHeight = parseInt(maxScreenHeight) - 200;
 
   const options = {
     pagination: false,
     selectableRows: "none",
     fixedHeader: true,
-    tableBodyHeight: maxScreenWidth + 'px',
+    tableBodyHeight: maxScreenHeight + 'px',
     setTableProps: () => {
       return {
         padding: 'default',
