@@ -19,7 +19,9 @@ function MyTable() {
       options: {
         filter: true,
         filterType: 'custom',
-
+        customBodyRender: (value) => {
+            return <b>{value}</b>;
+          },
         // if the below value is set, these values will be used every time the table is rendered.
         // it's best to let the table internally manage the filterList
         //filterList: [25, 50],
@@ -94,6 +96,9 @@ function MyTable() {
       name: "Name",
       options: {
         filter: false,
+        customBodyRender: (value) => {
+          return <b>{value}</b>;
+        },
       }
     }, {
       label: "Type",
