@@ -218,9 +218,16 @@ function MyTable() {
     },
   });
 
+  var adj = (window.screen.width == window.outerWidth) ? 0 : -15
+  var maxScreenWidth = window.innerWidth * (window.screen.width / (window.outerWidth + adj))
+  if (parseInt(maxScreenWidth) != maxScreenWidth) maxScreenWidth = window.screen.width
+
+
   const options = {
     pagination: false,
     selectableRows: "none",
+    fixedHeader: true,
+    tableBodyHeight: maxScreenWidth + 'px',
     setTableProps: () => {
       return {
         padding: 'default',
