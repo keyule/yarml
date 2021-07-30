@@ -7,8 +7,6 @@ import {
   FormGroup,
   FormLabel,
   TextField,
-  Checkbox,
-  FormControlLabel,
 } from '@material-ui/core';
 
 
@@ -154,6 +152,13 @@ function MyTable() {
       name: "Base Per Odin",
       options: {
         filter: false,
+        setCellProps: value => {
+          return {
+            style: {
+              background: '#3d3d3d',
+            }
+          };
+        }
       }
     },
     {
@@ -161,7 +166,13 @@ function MyTable() {
       name: "Job Per Odin",
       options: {
         filter: false,
-        
+        setCellProps: value => {
+          return {
+            style: {
+              background: '#3d3d3d',
+            }
+          };
+        }
       }
     },
     {
@@ -218,9 +229,11 @@ function MyTable() {
     },
   });
 
-  var adj = (window.screen.height == window.outerHeight) ? 0 : -15
+
+  // get max screen height
+  var adj = (window.screen.height === window.outerHeight) ? 0 : -15
   var maxScreenHeight = window.innerHeight * (window.screen.Height / (window.outerHeight + adj))
-  if (parseInt(maxScreenHeight) != maxScreenHeight) maxScreenHeight = window.screen.height
+  if (parseInt(maxScreenHeight) !== maxScreenHeight) maxScreenHeight = window.screen.height
 
   maxScreenHeight = parseInt(maxScreenHeight) - 200;
 
