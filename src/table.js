@@ -240,7 +240,7 @@ function MyTable() {
   var maxScreenHeight = window.innerHeight * (window.screen.Height / (window.outerHeight + adj))
   if (parseInt(maxScreenHeight) !== maxScreenHeight) maxScreenHeight = window.screen.height
 
-  maxScreenHeight = parseInt(maxScreenHeight) - 200;
+  maxScreenHeight = parseInt(maxScreenHeight) - 250;
 
   const options = {
     pagination: false,
