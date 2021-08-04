@@ -222,6 +222,22 @@ function MyTable() {
       options: {
         filter: true,
       }
+    },
+    {
+      label: "Card Drop Rate",
+      name: "Card Drop Rate",
+      options: {
+        filter: false,
+        display: false,
+      }
+    },
+    {
+      label: "Est No. to Kill",
+      name: "Est No. to Kill",
+      options: {
+        filter: false,
+        display: false,
+      }
     }
   ];
 
