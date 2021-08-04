@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/yarml/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/yarml/static/js/main.65be79ac.chunk.js",
-    "main.js.map": "/yarml/static/js/main.65be79ac.chunk.js.map",
+    "main.js": "/yarml/static/js/main.26b9bd59.chunk.js",
+    "main.js.map": "/yarml/static/js/main.26b9bd59.chunk.js.map",
     "runtime-main.js": "/yarml/static/js/runtime-main.b257e3a7.js",
     "runtime-main.js.map": "/yarml/static/js/runtime-main.b257e3a7.js.map",
     "static/js/2.cb6e2aa8.chunk.js": "/yarml/static/js/2.cb6e2aa8.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.b257e3a7.js",
     "static/js/2.cb6e2aa8.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.65be79ac.chunk.js"
+    "static/js/main.26b9bd59.chunk.js"
   ]
 }
